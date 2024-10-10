@@ -1,0 +1,6 @@
+{
+  "$schema": "https://github.com/glzr-io/zebar/raw/v2.2.2/resources/settings-schema.json",
+  "startupConfigs": [
+    "attaquer\\with-glazewm.zebar.json"
+  ]
+}
