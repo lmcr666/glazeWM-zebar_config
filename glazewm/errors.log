@@ -1,0 +1,11 @@
+[2m2024-09-30T17:22:34.753642Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m unknown anchor at line 293 column 15
+[2m2024-09-30T17:22:38.439700Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m unknown anchor at line 293 column 15
+[2m2024-10-02T16:22:24.006472Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-10-02T16:25:18.152057Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[0]: missing field `commands` at line 92 column 5
+[2m2024-10-02T16:25:44.828776Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[0]: missing field `commands` at line 92 column 5
+[2m2024-10-04T20:37:58.595319Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute '%ProgramFiles%/Mem Reduct/memreduct.exe'.\n\nError: Program path is not valid for command '%ProgramFiles%/Mem Reduct/memreduct.exe'."
+[2m2024-10-07T16:12:53.232914Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute '%ProgramFiles%/SystemInformer/SystemInformer.exe'.\n\nError: Program path is not valid for command '%ProgramFiles%/SystemInformer/SystemInformer.exe'."
+[2m2024-10-10T14:54:50.873205Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-10-10T14:57:24.581504Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected '-' indicator at line 134 column 3, while parsing a block collection at line 112 column 3
+[2m2024-10-10T14:58:11.488212Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[3]: missing field `match` at line 134 column 5
+[2m2024-10-10T15:04:31.168050Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute '%ProgramFiles%/Mem Reduct/memreduct.exe'.\n\nError: Program path is not valid for command '%ProgramFiles%/Mem Reduct/memreduct.exe'."
