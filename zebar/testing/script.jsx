@@ -1,16 +1,11 @@
 import React, {
-  useRef,
   useState,
   useEffect,
 } from 'https://esm.sh/react@18?dev';
 import { createRoot } from 'https://esm.sh/react-dom@18/client?dev';
 import * as zebar from 'https://esm.sh/zebar@2';
-import { useScreenshot } from 'https://esm.sh/use-react-screenshot'
 
-
-
-// const ColorThief = require(resolve(process.cwd(), "./color-thief-node.js"));
-// var colorThief = new ColorThief();
+// import { getPalette } from './color-thief-node';
 
 const providers = zebar.createProviderGroup({
   network: { type: 'network', refreshInterval: '2000' },
@@ -27,6 +22,13 @@ createRoot(document.getElementById('root')).render(<App />);
 function App() {
   const [output, setOutput] = useState(providers.outputMap);
   const [nowPlaying, setNowPlaying] = useState('');
+
+  const pathToScreenshot = '../screenshots/screenshot.png';
+
+  if (fs.existsSync(pathToScreenshot)) {
+    // getPalette(pathToScreenshot, 5, 10);
+  }
+
   const processIcons = {
     sublime_text: "nf nf-seti-sublime",
     chrome: "nf nf-fa-chrome",
@@ -46,10 +48,6 @@ function App() {
     Code: "nf nf-dev-code",
     floorp: "nf nf-oct-browser",
   };
-
-  // const ref = useRef(null)
-  // const [image, takeScreenshot] = useScreenshot()
-  // const getImage = () => takeScreenshot(ref.current)
 
   useEffect(() => {
     providers.onOutput(() => setOutput(providers.outputMap));
@@ -227,7 +225,7 @@ function App() {
           <>
             {output.glazewm.focusedWorkspace.children.map(
               (window) =>
-                window.hasFocus && window.title != undefined && (
+                window.hasFocus && (
                   <div className="current-window" key={window.id}>
                     {window.title.length > 90
                       ? window.title.slice(0, 90) + '...'

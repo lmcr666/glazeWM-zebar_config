@@ -4,13 +4,16 @@ general:
   # Example: The below command launches Zebar.
   startup_commands:
       - 'shell-exec zebar'
-      - 'shell-exec C:\Program Files\glzr.io\GlazeWM\cli\glazewm-extra.exe'
+      - 'shell-exec C:\Users\lmcr6\.glzr\glazewm\glazewm-extra.exe'
+      - 'shell-exec C:\Users\lmcr6\.glzr\glazewm\gat-gwm.exe'
+      # - 'shell-exec powershell C:\Users\lmcr6\.glzr\zebar\testing\takeScreenShot.ps1 C:\Users\lmcr6\.glzr\zebar\screenshots\'
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
   shutdown_commands: 
     - 'shell-exec taskkill /IM zebar.exe /F'
     - 'shell-exec taskkill /IM glazewm-extra.exe /F'
+    - 'shell-exec taskkill /IM gat-gwm.exe /F'
 
   # Commands to run after the WM config is reloaded.
   config_reload_commands: []
@@ -125,15 +128,15 @@ window_rules:
         window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
-  - commands: ['move --workspace 2']
-    match:
-      - window_process: { regex: 'Logitech G HUB|Floorp'}
   - commands: 
     - 'move --workspace 3'
     - 'focus --workspace 3'
     - 'move-workspace --direction right'
     match: 
       - window_process: { regex: 'Discord|mailspring|slack|Spotify' }
+  - commands: ['move --workspace 2']
+    match:
+      - window_process: { regex: 'Logitech G HUB|floorp'}
     
 
 binding_modes:
@@ -194,7 +197,7 @@ keybindings:
   # resizing via arrow keys or HJKL. The binding mode is defined above with
   # the name 'resize'.
   - commands: ['wm-enable-binding-mode --name resize']
-    bindings: ['alt+z']
+    bindings: ['alt+b']
 
   # Disables all keybindings until alt+shift+p is pressed again.
   - commands: ['wm-enable-binding-mode --name pause']
@@ -244,8 +247,8 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  # - commands: ['shell-exec cmd']
-  #   bindings: ['alt+enter']
+  - commands: ['shell-exec C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.21.2911.0_x64__8wekyb3d8bbwe/wt.exe']
+    bindings: ['alt+b']
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ['focus --next-workspace']

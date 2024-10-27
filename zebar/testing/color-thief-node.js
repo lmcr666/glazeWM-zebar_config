@@ -1,5 +1,5 @@
-const getPixels = require('get-pixels');
-const quantize = require('@lokesh.dhakar/quantize');
+import {getPixels} from 'https://esm.sh/get-pixels';
+import {quantize} from 'https://esm.sh/quantize';
 
 function createPixelArray(imgData, pixelCount, quality) {
     const pixels = imgData;
@@ -92,7 +92,7 @@ function getPalette(img, colorCount = 10, quality = 10) {
     });
 }
 
-module.exports = {
+export default {
     getColor,
     getPalette
 };
