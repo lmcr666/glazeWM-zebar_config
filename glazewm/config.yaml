@@ -138,6 +138,11 @@ window_rules:
   - commands: ['move --workspace 2']
     match:
       - window_process: { regex: 'Logitech G HUB|floorp'}
+  - commands: 
+    - 'resize --width -10%'
+    - 'move --direction right'
+    match:
+      - window_process: { regex: 'Spotify' }
     
 
 binding_modes:
